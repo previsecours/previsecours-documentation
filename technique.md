@@ -40,7 +40,7 @@ Comme le projet partait de 0, nous avons du travailler à l'aggrégation des don
 
 - Dessin de l'architecture technique avec détails des technos utilisées.
 
-![Schéma technique](img/Prévisecours - Architecture technique.png)
+![Schéma technique](https://github.com/previsecours/previsecours-documentation/blob/master/img/Pr%C3%A9visecours%20-%20Architecture%20technique.png)
 
 [Source: Google drawing pour modifications](https://docs.google.com/drawings/d/19m2pBj67aUdZEH8puVMv7UNx6OB7ofpAmTmhfFUWSe0/edit?usp=sharing)
 
