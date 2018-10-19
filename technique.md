@@ -132,7 +132,45 @@ Les modèles ne sont pas encore re-entrainés automatiquement car nous n'avions 
 
 ## 3. Application cartographique
 
-TBD pour Maitre Guillim.
+#### But:   
+L'application cartographique a pour objectif de naviguer à travers les prédictions de façon simple, interactive et intuitive. 
+Elle est disponible à l'adresse: [viz.previsecours.fr](https://viz.previsecours.fr/#/)
+
+#### Comment l'utiliser:
+La totalité de la documentation foncitonnelle est disponible à l'adresse: [/documentation](http://previsecours.fr/documentation)  
+La partie comment l'utiliser est plus spécifiquement [disponible ici](http://previsecours.fr/faq/carte/2018/02/10/comment-utiliser-la-carte.html)
+
+
+#### Structure: 
+Le code de l'application est open-source, et disponible à tous à l'adresse: [github.com/previsecours/vueJS_Previsecours](https://github.com/previsecours/vueJS_Previsecours) 
+
+Si on veut résumer la structure de l'application:
+
+Dans  ```vueJS_Previsecours/src/main.js``` on lance et configure l'application principale, avec son router, son store et som composant mère:
+```js
+new Vue({
+  store: store,
+  router,
+  el: '#previsecoursMainApp',
+  components: { App },
+  template: '<App/>'
+})
+```
+
+* En toute honneteté, le router ne sert presque à rien. Nous pourrions faire sans. Nous pensions utiliser des routes mais nous ne l'avons pas fait.
+* Le store lui en revanche est très important: c'est lui qui stocke l'état de l'application à tout moment. C'est donc sur lui que tous les composants Vue (les "fils" du composant mère "app") vont chercher les données. Les mises à jour de la donnée stoquent donc l'infromation dans ce store.
+
+Il n'y pas de backend: en effet l'infromation est fetch directement sur un elasticsearch exposé pour ce frontend.
+
+
+#### Utilisation:
+```bash
+# pour lancer l'application
+npm run dev
+
+# pour lancer un build
+npm run build
+```
 
 ### Pérénnisation
 
